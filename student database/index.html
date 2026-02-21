@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Records</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Student Records</h2>
+
+<select id="deptFilter" onchange="filterDepartment()">
+    <option value="All">All Departments</option>
+    <option value="CSE">CSE</option>
+    <option value="ECE">ECE</option>
+    <option value="EEE">EEE</option>
+</select>
+
+<button onclick="sortByName()">Sort by Name</button>
+<button onclick="sortByDate()">Sort by Date</button>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+<h3 id="count"></h3>
+
+<!-- SCRIPT MUST BE HERE -->
+<script src="script.js"></script>
+</body>
+</html>

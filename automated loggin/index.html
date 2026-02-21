@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audit Logging System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>📋 Automated Logging (Triggers & Views)</h1>
+
+<div class="container">
+
+    <h2>Add / Update Employee</h2>
+
+    <input type="text" id="name" placeholder="Employee Name">
+    <input type="text" id="role" placeholder="Role">
+
+    <button onclick="insertEmployee()">INSERT</button>
+    <button onclick="updateEmployee()">UPDATE</button>
+
+    <h2>Employee Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTable"></tbody>
+    </table>
+
+    <h2>📑 Audit Logs (Trigger Output)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Employee</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody id="logTable"></tbody>
+    </table>
+
+    <h2>📊 Daily Activity Report (View)</h2>
+    <button onclick="showDailyReport()">Generate Report</button>
+    <p id="dailyReport"></p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
